@@ -1,6 +1,11 @@
+Proje Adı: Finans Uygulaması
+
+Proje Katkısı: Scrum Master - Developer - Product Owner: Melissa İpek
+
+
 (lib dosyası içinden yazdığım kodlara erişebilirsiniz.)
 
-Proje Nedir?
+Proje Hakkında Bilgi:
 Bu proje, kullanıcıların finansal durumlarını etkin bir şekilde yönetmelerini sağlayan bir mobil uygulamadır. 
 Flutter ile geliştirilmiş olan uygulama, gelir ve gider takibi yapma, finansal raporlar oluşturma ve grafiklerle veri görselleştirme gibi özellikler sunar.
 Kullanıcı dostu arayüzü ve güvenli veri yönetimi ile kişisel finansın daha düzenli ve erişilebilir olmasını hedefler.

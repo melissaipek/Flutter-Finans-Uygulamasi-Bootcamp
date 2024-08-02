@@ -1,0 +1,14 @@
+// test/login_screen_test.dart
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:my_finance_app/screens/login_screen.dart';
+
+void main() {
+  testWidgets('Login screen test', (WidgetTester tester) async {
+    await tester.pumpWidget(MaterialApp(home: LoginScreen()));
+    
+    expect(find.text('Kullanıcı Adı'), findsOneWidget);
+    expect(find.text('Şifre'), findsOneWidget);
+    expect(find.byType(ElevatedButton), findsOneWidget);
+  });
+}

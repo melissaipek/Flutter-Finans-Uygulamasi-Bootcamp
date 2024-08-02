@@ -1,0 +1,29 @@
+// lib/screens/home_screen.dart
+import 'package:flutter/material.dart';
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Finansal Durum')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Toplam Bakiye', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+            SizedBox(height: 10),
+            Text('₺5,000.00', style: TextStyle(fontSize: 36)),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/transactions');
+              },
+              child: Text('İşlemler'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

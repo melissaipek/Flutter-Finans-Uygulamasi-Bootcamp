@@ -1,0 +1,28 @@
+// lib/screens/transactions_screen.dart
+import 'package:flutter/material.dart';
+import 'package:my_finance_app/models/transaction.dart';
+
+class TransactionsScreen extends StatelessWidget {
+  final List<Transaction> transactions = [
+    Transaction(id: '1', description: 'Maaş', amount: 5000, date: DateTime.now()),
+    Transaction(id: '2', description: 'Kira', amount: -1500, date: DateTime.now().subtract(Duration(days: 30))),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Finansal İşlemler')),
+      body: ListView.builder(
+        itemCount: transactions.length,
+        itemBuilder: (ctx, index) {
+          final tx = transactions[index];
+          return ListTile(
+            title: Text(tx.description),
+            subtitle: Text('Tarih: ${tx.date.toLocal().toShortDateString()}'),
+            trailing: Text(tx.amount > 0 ? '₺${tx.amount}' : '-₺${tx.amount.abs()}'),
+          );
+        },
+      ),
+    );
+  }
+}

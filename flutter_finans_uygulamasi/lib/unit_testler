@@ -1,0 +1,18 @@
+// test/transaction_test.dart
+import 'package:flutter_test/flutter_test.dart';
+import 'package:my_finance_app/models/transaction.dart';
+
+void main() {
+  test('Transaction model test', () {
+    final tx = Transaction(
+      id: '1',
+      description: 'Test',
+      amount: 100.0,
+      date: DateTime.now(),
+    );
+    
+    expect(tx.id, '1');
+    expect(tx.description, 'Test');
+    expect(tx.amount, 100.0);
+  });
+}
